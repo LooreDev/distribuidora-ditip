@@ -841,13 +841,13 @@ p {
 }
 
 .dist-img {
-    margin-top: -130px;
-    margin-bottom: 30px;
+    margin-top: -80px;
+    margin-bottom: 20px;
 }
 
 .dist-img img {
     box-shadow: 28px 28px 45px #d4d4d4, -28px -28px 45px #ffffff;
-    border-radius: 50%;
+    border-radius: 5%;
     overflow: hidden;
 }
 
