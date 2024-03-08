@@ -1,342 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- for icons  -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <!-- bootstrap  -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <!-- for swiper slider  -->
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-
-    <!-- fancy box  -->
-    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
-    <!-- custom css  -->
-    <link rel="stylesheet" href="style.css">
+    <title>Mis Productos</title>
+    <link rel="stylesheet" href="style-productos.css">
 </head>
 
 <body>
-    <div id="viewport">
-        <div id="js-scroll-content">
-            <section style="background-image: url(assets/images/menu-bg.png);"
-                class="our-menu section bg-light repeat-img" id="menu">
-                <div class="sec-wp">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="sec-title text-center mb-5">
-                                    
-                                    <h2 class="h2-title">Diversidad <span> & Productos</span></h2>
-                                    <div class="sec-title-shape mb-4">
-                                        <img src="assets/images/title-shape.svg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="menu-tab-wp">
-                            <div class="row">
-                                <div class="col-lg-12 m-auto">
-                                    <div class="menu-tab text-center">
-                                        <ul class="filters">
-                                            <div class="filter-active"></div>
-                                            <li class="filter" data-filter=".all, .breakfast, .lunch, .dinner">
-                                                Botanas
-                                            </li>
-                                            <li class="filter" data-filter=".breakfast">
-                                                Salsas
-                                            </li>
-                                            <li class="filter" data-filter=".lunch">
-                                                Desechables
-                                            </li>
-                                            <li class="filter" data-filter=".dinner">
-                                                Dulces
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="menu-list-row">
-                            <div class="row g-xxl-5 bydefault_show" id="menu-dish">
-                                <div class="col-lg-4 col-sm-6 dish-box-wp breakfast" data-cat="breakfast">
-                                    <div class="dish-box text-center">
-                                        <div class="dist-img">
-                                            <img src="assets/images/queso/doble-queso.png" alt="">
-                                        </div>
-                                        <div class="dish-title">
-                                            <h3 class="h3-title">Cheetos Queso</h3>
-                                        </div>
-                                        <div class="dish-info">
-                                            <ul>
-                                                <li>
-                                                    <p>Type</p>
-                                                    <b>Non Veg</b>
-                                                </li>
-                                                <li>
-                                                    <p>Persons</p>
-                                                    <b>2</b>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="dist-bottom-row">
-                                            <ul>
-                                                <li>
-                                                    <b>Rs. 499</b>
-                                                </li>
-                                                <li>
-                                                    <button class="dish-add-btn">
-                                                        <i class="uil uil-plus"></i>
-                                                    </button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+    <h1 id="titulo">Mis Productos</h1>
+    <div class="tab">
+        <button class="tablinks active" onclick="openCategory(event, 'botanas')">Botanas</button>
+        <button class="tablinks" onclick="openCategory(event, 'salsas')">Salsas</button>
+        <button class="tablinks" onclick="openCategory(event, 'desechables')">Desechables</button>
+        <button class="tablinks" onclick="openCategory(event, 'bolsas')">Bolsas</button>
+        <button class="tablinks" onclick="openCategory(event, 'dulces')">Dulces</button>
+    </div>
 
-                                <!-- 2 -->
-                                <div class="col-lg-4 col-sm-6 dish-box-wp breakfast" data-cat="breakfast">
-                                    <div class="dish-box text-center">
-                                        <div class="dist-img">
-                                            <img src="assets/images/dish/2.png" alt="">
-                                        </div>
-                                        <div class="dish-title">
-                                            <h3 class="h3-title">Grilled Chicken</h3>
-                                            <p>80 calories</p>
-                                        </div>
-                                        <div class="dish-info">
-                                            <ul>
-                                                <li>
-                                                    <p>Type</p>
-                                                    <b>Non Veg</b>
-                                                </li>
-                                                <li>
-                                                    <p>Persons</p>
-                                                    <b>1</b>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="dist-bottom-row">
-                                            <ul>
-                                                <li>
-                                                    <b>Rs. 359</b>
-                                                </li>
-                                                <li>
-                                                    <button class="dish-add-btn">
-                                                        <i class="uil uil-plus"></i>
-                                                    </button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- 3 -->
-                                <div class="col-lg-4 col-sm-6 dish-box-wp lunch" data-cat="lunch">
-                                    <div class="dish-box text-center">
-                                        <div class="dist-img">
-                                            <img src="assets/images/dish/3.png" alt="">
-                                        </div>
-                                        <div class="dish-rating">
-                                            4
-                                            <i class="uil uil-star"></i>
-                                        </div>
-                                        <div class="dish-title">
-                                            <h3 class="h3-title">Panner Noodles</h3>
-                                            <p>100 calories</p>
-                                        </div>
-                                        <div class="dish-info">
-                                            <ul>
-                                                <li>
-                                                    <p>Type</p>
-                                                    <b>Veg</b>
-                                                </li>
-                                                <li>
-                                                    <p>Persons</p>
-                                                    <b>2</b>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="dist-bottom-row">
-                                            <ul>
-                                                <li>
-                                                    <b>Rs. 149</b>
-                                                </li>
-                                                <li>
-                                                    <button class="dish-add-btn">
-                                                        <i class="uil uil-plus"></i>
-                                                    </button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 4 -->
-                                <div class="col-lg-4 col-sm-6 dish-box-wp lunch" data-cat="lunch">
-                                    <div class="dish-box text-center">
-                                        <div class="dist-img">
-                                            <img src="assets/images/dish/4.png" alt="">
-                                        </div>
-                                        <div class="dish-rating">
-                                            4.5
-                                            <i class="uil uil-star"></i>
-                                        </div>
-                                        <div class="dish-title">
-                                            <h3 class="h3-title">Chicken Noodles</h3>
-                                            <p>120 calories</p>
-                                        </div>
-                                        <div class="dish-info">
-                                            <ul>
-                                                <li>
-                                                    <p>Type</p>
-                                                    <b>Non Veg</b>
-                                                </li>
-                                                <li>
-                                                    <p>Persons</p>
-                                                    <b>2</b>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="dist-bottom-row">
-                                            <ul>
-                                                <li>
-                                                    <b>Rs. 379</b>
-                                                </li>
-                                                <li>
-                                                    <button class="dish-add-btn">
-                                                        <i class="uil uil-plus"></i>
-                                                    </button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 5 -->
-                                <div class="col-lg-4 col-sm-6 dish-box-wp dinner" data-cat="dinner">
-                                    <div class="dish-box text-center">
-                                        <div class="dist-img">
-                                            <img src="assets/images/dish/5.png" alt="">
-                                        </div>
-                                        <div class="dish-rating">
-                                            5
-                                            <i class="uil uil-star"></i>
-                                        </div>
-                                        <div class="dish-title">
-                                            <h3 class="h3-title">Bread Boiled Egg</h3>
-                                            <p>120 calories</p>
-                                        </div>
-                                        <div class="dish-info">
-                                            <ul>
-                                                <li>
-                                                    <p>Type</p>
-                                                    <b>Non Veg</b>
-                                                </li>
-                                                <li>
-                                                    <p>Persons</p>
-                                                    <b>2</b>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="dist-bottom-row">
-                                            <ul>
-                                                <li>
-                                                    <b>Rs. 99</b>
-                                                </li>
-                                                <li>
-                                                    <button class="dish-add-btn">
-                                                        <i class="uil uil-plus"></i>
-                                                    </button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- 6 -->
-                                <div class="col-lg-4 col-sm-6 dish-box-wp dinner" data-cat="dinner">
-                                    <div class="dish-box text-center">
-                                        <div class="dist-img">
-                                            <img src="assets/images/dish/6.png" alt="">
-                                        </div>
-                                        <div class="dish-rating">
-                                            5
-                                            <i class="uil uil-star"></i>
-                                        </div>
-                                        <div class="dish-title">
-                                            <h3 class="h3-title">Immunity Dish</h3>
-                                            <p>120 calories</p>
-                                        </div>
-                                        <div class="dish-info">
-                                            <ul>
-                                                <li>
-                                                    <p>Type</p>
-                                                    <b>Veg</b>
-                                                </li>
-                                                <li>
-                                                    <p>Persons</p>
-                                                    <b>2</b>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="dist-bottom-row">
-                                            <ul>
-                                                <li>
-                                                    <b>Rs. 159</b>
-                                                </li>
-                                                <li>
-                                                    <button class="dish-add-btn">
-                                                        <i class="uil uil-plus"></i>
-                                                    </button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
+    <div id="botanas" class="tabcontent active">
+        <div class="card-container">
         </div>
     </div>
-    <!-- jquery  -->
-    <script src="assets/js/jquery-3.5.1.min.js"></script>
-    <!-- bootstrap -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/popper.min.js"></script>
 
-    <!-- fontawesome  -->
-    <script src="assets/js/font-awesome.min.js"></script>
+    <div id="salsas" class="tabcontent">
+        <div class="card-container">
+        </div>
+    </div>
 
-    <!-- swiper slider  -->
-    <script src="assets/js/swiper-bundle.min.js"></script>
+    <div id="desechables" class="tabcontent">
+        <div class="card-container">
+        </div>
+    </div>
 
-    <!-- mixitup -- filter  -->
-    <script src="assets/js/jquery.mixitup.min.js"></script>
+    <div id="bolsas" class="tabcontent">
+        <div class="card-container">
+        </div>
+    </div>
 
-    <!-- fancy box  -->
-    <script src="assets/js/jquery.fancybox.min.js"></script>
+    <div id="dulces" class="tabcontent">
+        <div class="card-container">
+        </div>
+    </div>
 
-    <!-- parallax  -->
-    <script src="assets/js/parallax.min.js"></script>
+    <div id="fullscreen" class="fullscreen">
+        <span class="close" onclick="closeFullscreen()">&times;</span>
+        <img src="" alt="Fullscreen Image" class="fullscreen-img">
+    </div>
+    <button id="arrow-up" onclick="topFunction()" title="Ir arriba">&uarr;</button>
 
-    <!-- gsap  -->
-    <script src="assets/js/gsap.min.js"></script>
+    <script>
+        function openCategory(evt, categoryName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(categoryName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
 
-    <!-- scroll trigger  -->
-    <script src="assets/js/ScrollTrigger.min.js"></script>
-    <!-- scroll to plugin  -->
-    <script src="assets/js/ScrollToPlugin.min.js"></script>
-    <!-- rellax  -->
-    <!-- <script src="assets/js/rellax.min.js"></script> -->
-    <!-- <script src="assets/js/rellax-custom.js"></script> -->
-    <!-- smooth scroll  -->
-    <script src="assets/js/smooth-scroll.js"></script>
-    <!-- custom js  -->
-    <script src="main.js"></script>
+        function agregarProducto(categoria, nombre, descripcion, imagen) {
+            var categoriaDiv = document.getElementById(categoria);
+            var productoDiv = document.createElement("div");
+            productoDiv.className = "card";
+            productoDiv.innerHTML = `
+                <img src="${imagen}" alt="${nombre}" onclick="openFullscreen('${imagen}')">
+                <p><strong>${nombre}</strong></p>
+                <p>${descripcion}</p>
+            `;
+            categoriaDiv.querySelector('.card-container').appendChild(productoDiv);
+        }
+
+        function openFullscreen(imagenSrc) {
+            var fullscreenImg = document.querySelector('.fullscreen-img');
+            fullscreenImg.src = imagenSrc;
+            document.getElementById('fullscreen').style.display = 'block';
+        }
+
+        function closeFullscreen() {
+            document.getElementById('fullscreen').style.display = 'none';
+        }
+
+        agregarProducto('botanas', 'Palomita Queso', 'Gramos: 11g | 370g | 450g | 2kg', 'assets/images/botanas/palomitas-queso.png');
+        agregarProducto('botanas', 'Palomita Caramelo', 'Gramos: 11g | 370g | 450g | 2.5kg', 'assets/images/botanas/palomita-caramelo.jpg');
+        agregarProducto('botanas', 'Fiesta Latina', 'Gramos: 11g | 450g', 'assets/images/botanas/fiesta-latina.jpg');
+        agregarProducto('botanas', 'Pizza', 'Gramos: 11g | 450g | 3kg', 'assets/images/botanas/pizza.png');
+        agregarProducto('botanas', 'Tronchesse Queso', 'Gramos: 11g | 750g', 'assets/images/botanas/troncheese-queso.jpg');
+        agregarProducto('botanas', 'Tronchesse Fuego', 'Gramos: 11g | 750g', 'assets/images/botanas/troncheese-fuego.jpg');
+        agregarProducto('botanas', 'Queso Cheddar', 'Gramos: 450g | 3kg', 'assets/images/botanas/queso-cheddar.jpg');
+        //agregarProducto('botanas', 'Queso Cheddar Especial', 'Gramos: 450g | 3kg', 'assets/images/botanas/queso-cheddar-especial.png');
+        //agregarProducto('botanas', 'Matchos Queso', 'Gramos: 450g', 'assets/images/botanas/matchos.png');
+        agregarProducto('botanas', 'Valencheeto', 'Gramos: 450g | 3kg', 'assets/images/botanas/valencheto.jpg');
+        //agregarProducto('botanas', 'Botana Mix', 'Gramos: 450g | 3kg', 'assets/images/botanas/botana-mix.png');
+        //agregarProducto('botanas', 'Jalacheto', 'Gramos: 450g | 3kg', 'assets/images/botanas/jalacheto.png');
+        agregarProducto('botanas', 'Chipotle', 'Gramos: 450g | 3kg', 'assets/images/botanas/chipotle.jpg');
+        agregarProducto('botanas', 'Chelimón', 'Gramos: 450g | 3kg', 'assets/images/botanas/chelimon.jpg');
+        agregarProducto('botanas', 'Garrita', 'Gramos: 450g | 3kg', 'assets/images/botanas/garra.png');
+        agregarProducto('botanas', 'Ke Chidos Queso', 'Gramos: 430g | 800g', 'assets/images/botanas/ke-chidos-queso.jpg');
+        agregarProducto('botanas', 'Ke Chidos Pizza', 'Gramos: 430g | 800g', 'assets/images/botanas/ke-chidos-pizza.jpg');
+        agregarProducto('botanas', 'Ke Chidos Extremo', 'Gramos: 450g | 800g', 'assets/images/botanas/ke-chidos-extremo.jpg');
+        agregarProducto('botanas', 'Puntachos', 'Gramos: 480g', 'assets/images/botanas/puntachos.jpg');
+        agregarProducto('botanas', 'Troncheese Queso', 'Gramos: 11g | 750g', 'assets/images/botanas/troncheese-queso.jpg');
+        agregarProducto('botanas', 'Troncheese Fuego', 'Gramos: 11g | 750g', 'assets/images/botanas/troncheese-fuego.jpg');
+        agregarProducto('botanas', 'Troncheese Pizza', 'Gramos: 11g | 750g', 'assets/images/botanas/troncheese-pizza.jpg');
+        //agregarProducto('botanas', 'Troncheese Fuego Azul', 'Gramos: 11g | 750g', 'assets/images/botanas/troncheese-azul.png');
+
+        agregarProducto('salsas', 'Yahualica', 'Litros: 355ml | 1 Lt | Galón', 'assets/images/salsas/yahualica.png');
+        agregarProducto('salsas', 'Costa Brava', 'Litros: 370ml | 1 Lt | 1.5 Lt | Galón', 'assets/images/salsas/costa-brava.png');
+        agregarProducto('salsas', 'Valentina Etiq. Amarilla', 'Litros: 370ml | 1 Lt ', 'assets/images/salsas/valentina.png');
+        agregarProducto('salsas', 'Valentina Etiq. Negra', 'Litros: 370ml | 1 Lt ', 'assets/images/salsas/valentina-negra.png');
+        agregarProducto('salsas', 'Chamoy Chilerito', 'Litros: 355ml | 1 Lt | 1.5 Lt | Galón', 'assets/images/salsas/chamoy.png');
+
+        agregarProducto('desechables', 'Charola Covermex', 'Tamaño: 066 | 855', 'assets/images/desechables/charolas.jpg');
+        //agregarProducto('desechables', 'Charola 066 Mariel', 'assets/images/desechables/charola-066-mariel.jpg');
+        agregarProducto('desechables', 'Vaso Reyma 12', 'Cantidad: 50 pzas x paq', 'assets/images/desechables/vaso-plastico.jpg');
+        agregarProducto('desechables', 'Plato Termico #9', 'Con división Reyma', 'assets/images/desechables/plato-termico-9.jpg');
+        agregarProducto('desechables', 'Vasos Termicos', 'Tamaño: #8 | #12 <br>#16 | #32', 'assets/images/desechables/vasos-termico.jpg');
+        agregarProducto('desechables', 'Tapas Reyma', 'Tamaño: 1 1/2 1/4 Lisa', 'assets/images/desechables/tapa.jpg');
+        
+        agregarProducto('bolsas', 'Bolsa Negra', 'Tamaño:<br> 50 x 70 <br> 60 x 90<br>70 x 90 <br> 70 + 30 + 120', 'assets/images/bolsas/bolsa-negra.jpg');
+        agregarProducto('bolsas', 'Bolsa Camiseta Poliseda', 'Tamaño: <br>Mini <br> Chica<br>Mediana <br> Grande Negra Kileada', 'assets/images/bolsas/bolsa-camiseta.jpg');
+        agregarProducto('bolsas', 'Rollo Poliseda Reyma', 'Tamaño: 15x25 | 20x30 <br> 25x35 | 30x40', 'assets/images/bolsas/bolsa-rollo.jpeg');
+        //agregarProducto('bolsas', 'Bolsa de Camiseta Mediana', 'Tamaño: 50 pzas x paq', 'assets/images/bolsas/bolsa-camiseta-mediana.jpg');
+        agregarProducto('bolsas', 'Bolsa Plana', 'Tamaño: 30 x 40', 'assets/images/bolsas/bolsa-plana.jpg');
+
+        agregarProducto('dulces', 'Mazapan', 'Gramos: ', 'assets/images/dulces/mazapan.png');
+        agregarProducto('dulces', 'Pulparindo', 'Tamaño: Grande', 'assets/images/dulces/pulparindo.jpg');
+        agregarProducto('dulces', 'Pulparindots', 'assets/images/dulces/pulparindots.png');
+        agregarProducto('dulces', 'Caramelo Aciduladito', 'assets/images/dulces/aciduladito.png');
+        agregarProducto('dulces', 'Ranita', 'assets/images/dulces/ranita.jpg');
+        agregarProducto('dulces', 'Cacahuate Japones', 'Tamaño: Chico', 'assets/images/dulces/cacahuate.png');
+        //agregarProducto('dulces', 'Bombón Gigante', 'assets/images/dulces/bombon.png');
+        agregarProducto('dulces', 'Chocolate Nugs', 'assets/images/dulces/nugs.jpg');
+
+        function toggleMenu() {
+            var menu = document.querySelector('.tab');
+            menu.classList.toggle('active');
+        }
+
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("arrow-up").style.display = "block";
+            } else {
+                document.getElementById("arrow-up").style.display = "none";
+            }
+        }
+
+        document.getElementById("arrow-up").onclick = function () {
+            document.body.scrollTop = 0; 
+            document.documentElement.scrollTop = 0; 
+        }
+    </script>
+
 </body>
 
 </html>
